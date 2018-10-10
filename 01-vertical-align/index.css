@@ -1,0 +1,18 @@
+#table {
+    display: table;
+}
+.tableRow {
+    display: table-row;
+}
+.tableCell {
+    display: table-cell;
+    height: 3em;
+    width: 12em;
+    vertical-align: middle;
+}
+.tableRow:nth-child(odd) .tableCell:nth-child(odd) {
+    background-color: #eee;
+}
+.tableRow:nth-child(even) .tableCell:nth-child(even) {
+    background-color: #eee;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+</head>
+<body>
+    <form action="" method="post">
+        <ul>
+            <li>
+                <input type="radio" name="valign" value="0" id="top" /><label for="top">Vertical-align: top</label>
+            </li>
+            <li>
+                <input type="radio" name="valign" value="1" id="middle" /><label for="middle">Vertical-align: middle</label>
+            </li>
+            <li>
+                <input type="radio" name="valign" value="2" id="bottom" /><label for="bottom">Vertical-align: bottom</label>
+            </li>
+        </ul>
+    </form>
+    <div id="table">
+        <div class="tableRow">
+            <div class="tableCell">
+                Some content
+            </div>
+            <div class="tableCell">
+                More content
+            </div>
+        </div>
+        <div class="tableRow">
+            <div class="tableCell">
+                Row 2 content
+            </div>
+            <div class="tableCell">
+                More row 2 content
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(
+    function(){
+        $('input:radio[name=valign]').click(
+            function(){
+                if ($(this).val() == 0) {
+                    $('.tableCell').css('vertical-align','top');
+                }
+                else if ($(this).val() == 1) {
+                    $('.tableCell').css('vertical-align','middle');
+                } 
+                else if ($(this).val()==2) {
+                 $('.tableCell').css('vertical-align','bottom');   
+                }
+            }
+          );  
+    }
+    );
+    </script>    
+
+</body>
+</html>
